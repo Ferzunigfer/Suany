@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Suany Bueso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #00ccff, #ff66b2);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #ff66b2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            color: #00ccff;
+            font-size: 1.2em;
+        }
+        img {
+            width: 10cm;
+            height: 10cm;
+            object-fit: cover;
+            margin: 10px 0;
+            border: 5px solid #ff66b2;
+            border-radius: 10px;
+        }
+        audio {
+            margin: 20px 0;
+            width: 50%;
+            border: 2px solid #ff66b2;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Feliz Cumpleaños Suany Bueso!</h1>
+        <p>Espero que tengas un día increíble lleno de alegría y sorpresas. ¡Te deseo todo lo mejor en tu día especial! ¡Y no olvides que para mí sos súper especial!</p>
+
+        <img src="cumpleaños2/suany1.jpeg" alt="Imagen de cumpleaños 1">
+        <img src="cumpleaños2/juntos2.jpeg" alt="Imagen de cumpleaños 2">
+
+        <audio controls>
+            <source src="cumpleaños2/cumpleaños/HappyBirthday.mp4" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <!-- Incluir el script de confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        function launchConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff66b2', '#00ccff', '#ffcc00']
+            });
+        }
+
+        window.onload = function() {
+            launchConfetti();
+            setInterval(launchConfetti, 10000);
+        };
+    </script>
+</body>
+</html>
